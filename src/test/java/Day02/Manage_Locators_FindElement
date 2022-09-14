@@ -1,0 +1,67 @@
+1->driver.manage( ).window( ).maximize( ); Browser’i maximize yapar
+2->driver.manage( ).window( ).minimize( ); Browser’i minimize yapar
+3->driver.manage( ).window( ).fullscreen( ); Browser’i full screen yapar
+4->driver.manage( ).window( ).getPosition( );Browser’in koordinatlarini verir
+5->driver.manage( ).window( ).getSize( ); Browser’in olculerini verir
+6->->driver.manage( ).window( ).setPosition(new Point ( x:80 , y:0 ) ) ;
+      Browser’i istenen koordinata tasir
+7->driver.manage( ).window( ).setSize(new Dimension( 800 , 600 ));
+   Browser’i istenen olculere getirir.
+8->driver.manage( ).timeouts( ).implicitlyWait(Duration.ofSeconds(10));
+   Istenen sayfa acilincaya kadar maximum bekleme suresini belirtir
+9->driver.close( ); sadece calisilan browser'i kapatir
+   driver.quit( ); acik olan tum browser'lari kapatir
+
+--LOCATORS
+Bir web elementini tanimlamak için 8 tane selenium locator vardır.
+1. id
+->>WebElement aramaKutusu = driver.findElement(By.id (“twotabsearchtextbox"));
+
+2. name
+->>WebElement passwordTextBox =driver.findElement(By.name(“field-keywords"));
+
+3. className
+WebElement passwordTextBox =driver.findElement(By.className("form-control"));
+❖ Class attribute’u olduğunda kullanılabilir.
+
+4. tagName
+WebElement passwordTextBox =driver.findElement(By.tagName("input"));
+❖ Bu, diğer konum belirleyicilerden biraz farklıdır.
+❖ <div>, <a>, <input>, ... gibi belirli bir etiketi ilettiğinizde, birden fazla aynı ad
+etiketine sahip olabileceğiniz için birden çok öğeyi döndürür
+Çoğunlukla öğelerin bir listesini almak için kullanılır. Bu nedenle findElements()
+yöntemiyle kullanılması önerilir
+
+***sayfadaki tum linleri dondurmek icin tagName("a")
+
+
+
+5. linkText
+WebElement passwordTextBox = driver.findElement(By.linkText(“Addresses"));
+❖ Bu yalnızca HTML bağlantılarını(link) tanımlamak için kullanılabilir.
+❖ HTML link elementleri, bir web sayfasında bağlantı etiketi(tag) kısaltması olan <a>
+etiketi(tag) kullanılarak temsil edilir.
+
+6. partialLinkText
+WebElement passwordTextBox = driver.findElement(By. partialLinkText(“dresses"));
+❖ linkText ( ) yöntemine benzer.
+❖ Tek fark, tam metin vermek zorunda kalmamanızdır.
+
+7. xpath => xpath yazmanın birden fazla yolu vardır
+8. cssSelector => css yazmanın birden fazla yolu vardır
+
+--Locator bulmak icin
+driver.findElement(Locator); methodunu kullaniriz
+
+
+
+
+
+
+
+
+
+
+
+
+

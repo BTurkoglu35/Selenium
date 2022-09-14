@@ -1,0 +1,17 @@
+1->System.setProperty(“”,””) method’unu kullanarak webdriver’in turunu ve path’ini
+  belirleyelim
+2->driver.get( String Url ); String olarak girilen Url’e gider
+3->driver.getTitle( );Icinde olunan sayfanin basligini String
+   olarak getirir
+4->driver.getCurrentUrl( ); Icinde olunan sayfanin Url’ini
+   String olarak getirir
+5->driver.getPageSource( ); Icinde olunan sayfanin kaynak
+   kodlarini String olarak getirir
+6->driver.navigate( ).to( String Url ); String olarak girilen Url’e gider
+7->driver.navigate( ).back ( ); Icinde olunan sayfadan, geldigi onceki
+   sayfaya dondurur
+8->driver.navigate( ).forward ( ); Back ile donulen bir sayfadan
+   tekrar ileri gider
+9->   driver.navigate( ).refresh ( ); Icinde olunan sayfayi yeniler
+10->driver.getWindowHandle()->//girilen sayfanin hash kodunu getirir
+                                      //farkli pencereler arasinda gezinebilmek icin bu methodu kullaniriz.
